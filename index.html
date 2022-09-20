@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Login-Controle de contas Padel</title>
+     <link rel="stylesheet" href="app/dist/styles/style.css">
+</head>
+<body class="body_log">
+     <div class="container_log">
+          <h1>Login</h1>
+          <input type="text" placeholder="Nome" id="email">
+          <br><br>
+          <input type="password" placeholder="Senha" id="password">
+          <br><br>
+          <button id="login-button" onClick="login()">Enviar</button>
+     </div>
+</body>
+<script src="./app/src/view/login.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+<script>
+     const firebaseConfig = {
+    apiKey: "AIzaSyCLWZbVTT4KZ-1cSA0YNckf2yppqB0Wt_c",
+    authDomain: "login-controle-de-contas-5029c.firebaseapp.com",
+    projectId: "login-controle-de-contas-5029c",
+    storageBucket: "login-controle-de-contas-5029c.appspot.com",
+    messagingSenderId: "1083796428543",
+    appId: "1:1083796428543:web:b455209bcefff9a2691eca",
+    measurementId: "G-NBW6SNWW83"
+  };
+  firebase.initializeApp(firebaseConfig);
+
+</script>
+</html>

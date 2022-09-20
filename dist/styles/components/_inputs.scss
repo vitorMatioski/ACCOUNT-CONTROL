@@ -1,0 +1,138 @@
+.container {
+    display: flex;
+    justify-content: center;
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        .inputs-div {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 50%;
+            margin: 1rem;
+            .form-labels {
+                color: rgb(59, 69, 255);
+                padding: 8px;
+            }
+
+            input {
+                padding-left: 1rem;
+                border: 1px solid rgb(59, 69, 255);
+                border-radius: 8px;
+                width: 50vw;
+                height: 2rem;
+                outline: none;
+                font-family:Arial, Helvetica, sans-serif;
+                font-weight: 500;
+                &:hover {
+                    border: 2px solid rgb(59, 69, 255);
+                }
+            }
+
+            select {
+                padding-left: 1rem;
+                border: 1px solid rgb(59, 69, 255);
+                border-radius: 8px;
+                width: 30vw;
+                height: 2rem;
+                outline: none;
+                font-family:Arial, Helvetica, sans-serif;
+                font-weight: 500;
+                &:active {
+                    border: 2px solid rgb(59, 69, 255);
+                }
+            }
+        }
+    }
+
+    .button-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        width: 100%;
+        button {
+            color: white;
+            border: none;
+            border-radius: 8px;
+            width: 10rem;
+            height: 3rem;
+            background-color: rgb(59, 69, 255);
+            font-size: 1rem;
+            &:hover {
+                background-color: blue;
+            }
+        }
+
+        .filter-form {
+            border: 1px solid rgb(59, 69, 255);
+            border-radius: 8px;
+            width: 80%;
+            height: 3rem;
+            font-size: 1rem;
+            margin-top: 1rem;
+            padding-left: 1rem;
+            outline: none;
+            &:hover {
+                border: 2px solid rgb(59, 69, 255);
+            }
+        }
+    }
+
+    .div-informations {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;  
+        
+            .ul-lists {
+                display: flex;
+                flex-direction: column; 
+                list-style: none;
+                border: 2px solid rgb(59, 69, 255);
+                border-radius: 8px;
+                margin: 2rem;
+                width: 100%;
+                padding: 1rem;
+            li {
+                margin: 8px;
+                font-size: 1.25rem;
+            }
+
+            a{ 
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                width: 100%;
+                height: 2rem;
+                background-color: rgb(59, 69, 255);
+                margin-top: 1rem;
+                border: none;
+                border-radius: 4px;
+                color: white;
+                font-size: 1rem;
+                text-decoration: none;
+                cursor: pointer;
+            }
+    
+            .deleteButton { 
+                width: 100%;
+                height: 2rem;
+                background-color: rgb(12, 148, 46);
+                margin-top: 1rem;
+                border: none;
+                border-radius: 4px;
+                color: white;
+                font-size: 1rem;
+            }    
+        }    
+    }
+
+}

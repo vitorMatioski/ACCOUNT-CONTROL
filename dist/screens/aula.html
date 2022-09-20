@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Controle de Contas</title>
+        <link rel="stylesheet" href="../styles/style.css">
+    </head>
+
+    <body onload="getAulas()">
+        <header>
+            <h1 id="title">Controle de Aulas</h1>
+                     
+
+            <hr width="90%" color="black">
+
+            <p id="description">Adicionar aula:</p>            
+            
+        </header>
+
+        <div class="container">
+            <form>
+                <div class="inputs-div">
+                    <label class="form-labels">Nome</label>                  
+                    <input class="inputsText" id="nome" type="text" onclick="addTextMask()">
+                </div>
+
+                <div class="inputs-div">                    
+                    <label class="form-labels">Data</label>  
+                    <input id="dataAula" type="date">
+                </div>
+
+                <div class="inputs-div">
+                    <label class="form-labels">Valor</label>  
+                    <input id="valorAula" type="text">
+                </div>
+
+                <div class="inputs-div">
+                    <label class="form-labels">Descrição</label> 
+                    <input id="descricao" type="text">
+                </div>
+
+                <div class="button-div">
+                    <button type="submit" onclick="postAula()">Salvar</button>
+                    <input type="text" class="filter-form" placeholder="Pesquise pelo nome">
+                </div>
+
+                <div class="div-informations">
+                    
+                </div>  
+                
+                <div class="modal-container" id="confirmation-modal">
+                    <div class="modal">
+                        <div class="editTitle">
+                            <p>Edite as informações da aula aqui!</p>
+                        </div>
+                        <div class="modal-close-button">
+                            <button class="close-button">X</button>
+                        </div>
+    
+                        <div class="modal-inputs">
+                            <div class="inputs-div">
+                                <label class="form-labels">Nome</label>                  
+                                <input class="inputsText" id="nomeEdit" type="text" onclick="addTextMask()">
+                            </div>
+
+                            <div class="inputs-div">                    
+                                <label class="form-labels">Data</label>  
+                                <input id="dataAulaEdit" type="date">
+                            </div>
+            
+                            <div class="inputs-div">
+                                <label class="form-labels">Valor</label>  
+                                <input id="valorAulaEdit" type="text">
+                            </div>
+            
+                            <div class="inputs-div">
+                                <label class="form-labels">Descrição</label> 
+                                <input id="descricaoEdit" type="text">
+                            </div>
+                            <input type="hidden" id="id-task">
+            
+                        <div class="button-div">
+                            <button class="saveButton" id="saveButtonTask">Salvar</button>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+        <script src="../../src/view/text-mask.js"></script>
+        <script src="../functions/aulas.js"></script>
+        <script src="../view/search-user.js"></script>
+        <script src="../../src/view/modal-pop-up-user.js"></script>
+
+    </body>
+</html>

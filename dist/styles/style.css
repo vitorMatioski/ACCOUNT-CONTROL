@@ -1,0 +1,383 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 60%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  width: 100%;
+}
+header #title {
+  text-transform: uppercase;
+  text-align: center;
+  color: rgb(59, 69, 255);
+  font-weight: bold;
+}
+header .option-btns {
+  margin: 1rem;
+  margin-top: 0;
+}
+header .option-btns a {
+  width: 50%;
+}
+header .option-btns button {
+  width: 15vw;
+  height: 7vh;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(59, 69, 255);
+  color: white;
+  font-size: 1rem;
+}
+header .option-btns button:hover {
+  background-color: blue;
+}
+header #description {
+  color: rgb(59, 69, 255);
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+.container form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.container form .inputs-div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 50%;
+  margin: 1rem;
+}
+.container form .inputs-div .form-labels {
+  color: rgb(59, 69, 255);
+  padding: 8px;
+}
+.container form .inputs-div input {
+  padding-left: 1rem;
+  border: 1px solid rgb(59, 69, 255);
+  border-radius: 8px;
+  width: 50vw;
+  height: 2rem;
+  outline: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+.container form .inputs-div input:hover {
+  border: 2px solid rgb(59, 69, 255);
+}
+.container form .inputs-div select {
+  padding-left: 1rem;
+  border: 1px solid rgb(59, 69, 255);
+  border-radius: 8px;
+  width: 30vw;
+  height: 2rem;
+  outline: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+.container form .inputs-div select:active {
+  border: 2px solid rgb(59, 69, 255);
+}
+.container .button-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.container .button-div button {
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 10rem;
+  height: 3rem;
+  background-color: rgb(59, 69, 255);
+  font-size: 1rem;
+}
+.container .button-div button:hover {
+  background-color: blue;
+}
+.container .button-div .filter-form {
+  border: 1px solid rgb(59, 69, 255);
+  border-radius: 8px;
+  width: 80%;
+  height: 3rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+  padding-left: 1rem;
+  outline: none;
+}
+.container .button-div .filter-form:hover {
+  border: 2px solid rgb(59, 69, 255);
+}
+.container .div-informations {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .div-informations .ul-lists {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  border: 2px solid rgb(59, 69, 255);
+  border-radius: 8px;
+  margin: 2rem;
+  width: 100%;
+  padding: 1rem;
+}
+.container .div-informations .ul-lists li {
+  margin: 8px;
+  font-size: 1.25rem;
+}
+.container .div-informations .ul-lists a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 2rem;
+  background-color: rgb(59, 69, 255);
+  margin-top: 1rem;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+.container .div-informations .ul-lists .deleteButton {
+  width: 100%;
+  height: 2rem;
+  background-color: rgb(12, 148, 46);
+  margin-top: 1rem;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 1rem;
+}
+
+.modal-container.show {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-container.show .modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  min-width: 300px;
+  max-width: 1000px;
+  width: 90%;
+  height: auto;
+  position: relative;
+  box-shadow: 5px 5px 10px 0 rgba(255, 255, 255, 0.3);
+}
+.modal-container.show .modal .editTitle {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.modal-container.show .modal .editTitle p {
+  font-size: 2rem;
+  color: rgb(59, 69, 255);
+  margin: 2rem;
+}
+.modal-container.show .modal .modal-inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+}
+.modal-container.show .modal .modal-inputs .inputs-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+}
+.modal-container.show .modal .modal-close-button .close-button {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  background-color: blue;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+@-webkit-keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.show .modal {
+  -webkit-animation: modal 0.7s;
+          animation: modal 0.7s;
+}
+
+.modal-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 2000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.modal-container .modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  min-width: 300px;
+  max-width: 1000px;
+  width: 100%;
+  height: 50%;
+  position: relative;
+  box-shadow: 5px 5px 10px 0 rgba(255, 255, 255, 0.3);
+}
+.modal-container .modal .editTitle {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.modal-container .modal .editTitle p {
+  font-size: 2rem;
+  color: rgb(59, 69, 255);
+  margin: 2rem;
+}
+.modal-container .modal .modal-inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.modal-container .modal .modal-close-button .close-button {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  background-color: blue;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.show .modal {
+  -webkit-animation: modal 0.7s;
+          animation: modal 0.7s;
+}
+
+.body_log {
+  background-color: aqua;
+}
+.body_log .container_log {
+  background-color: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 80px;
+  border-radius: 15px;
+  color: #fff;
+}
+.body_log .container_log h1 {
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+.body_log .container_log input {
+  padding: 15px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+.body_log .container_log button {
+  background-color: dodgerblue;
+  border: none;
+  padding: 15px;
+  width: 100%;
+  border-radius: 10px;
+  color: white;
+  font-size: 15px;
+}
+.body_log .container_log button:hover {
+  background-color: deepskyblue;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */
